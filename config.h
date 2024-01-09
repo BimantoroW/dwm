@@ -84,7 +84,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,             			XK_w,	   spawn,          {.v = termcmd } },
+	{ MODKEY,             			XK_e,	   spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
@@ -108,14 +108,14 @@ static const Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } }, */
-	{ MODKEY,                       XK_k,	   zoom,           {0} },
-	{ MODKEY,                       XK_e,	   view,           {0} },
-	{ MODKEY, 						XK_q,      killclient,     {0} },
+	{ MODKEY,           			XK_Return, zoom,           {0} },
+	{ MODKEY,                       XK_q,	   view,           {0} },
+	{ MODKEY, 						XK_w,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,             			XK_Return, fullscreen,     {0} },
-	{ MODKEY|ShiftMask,             XK_Return, togglefullscr,  {0} },
+	{ MODKEY,             			XK_f, 	   fullscreen,     {0} },
+	{ MODKEY|ShiftMask,             XK_f,	   togglefullscr,  {0} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -124,7 +124,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|						XK_grave,  focusmaster,	   {0} },
+	{ MODKEY,						XK_grave,  focusmaster,	   {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
