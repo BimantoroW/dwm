@@ -43,6 +43,7 @@
 
 #include "drw.h"
 #include "util.h"
+#include "nextprevtag.h"
 
 /* macros */
 #define BUTTONMASK              (ButtonPressMask|ButtonReleaseMask)
