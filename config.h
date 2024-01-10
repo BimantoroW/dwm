@@ -87,7 +87,7 @@ static const Key keys[] = {
 	{ MODKEY,             			XK_e,	   spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	STACKKEYS(MODKEY,                          focus)
-	STACKKEYS(MODKEY|ShiftMask,                push)
+	STACKKEYS(MODKEY|ControlMask,              push)
 	{ MODKEY,                       XK_k,	   view_adjacent,  {.i = +1 } },
 	{ MODKEY,                       XK_j,	   view_adjacent,  {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
